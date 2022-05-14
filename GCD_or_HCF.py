@@ -1,8 +1,8 @@
 def hcf(a,b):
-    n=b
-    while(n):
-        if(a%n==0 and b%n==0):
-            return n
-        n-=1
-m,n=map(int,input().split())
-print(hcf(m,n))
+    c=b
+    while(c):
+        if(a%c==0 and b%c==0):
+            return c
+        c-=1
+a,b=map(int,input().split())
+print(hcf(a,b))
