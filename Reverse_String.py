@@ -1,4 +1,3 @@
 n=input()
-x=n.split()
-a=list(reversed(x))
-print(" ".join(a))
+x=len(n)
+print(n[x-1: :-1])
