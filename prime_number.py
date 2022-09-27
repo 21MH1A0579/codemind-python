@@ -1,9 +1,12 @@
 def prime(n):
     for i in range(2,(n//2)+1):
-        if(n%i==0):
-            print("not a prime")
-            break
+        if (n%i==0):
+            return 0
     else:
-        print("prime")
+        return 1
 n=int(input())
-prime(n)
+if(prime(n)):
+    print("prime")
+else:
+    print("not a prime")
+        
