@@ -6,12 +6,10 @@ while(c<=n):
     a=b
     b=c
     c=a+b
-if n-b<c-n:
+if(n-b)<(c-n):
     print(b)
-elif n-b>c-n:
+elif(n-b)>(c-n):
     print(c)
 else:
     print(b,c)
-    
-    
     
