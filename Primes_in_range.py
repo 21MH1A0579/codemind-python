@@ -1,14 +1,14 @@
-def p(n):
-    if n==1:
+def prime(n):
+    if(n<2):
         return 0
     for i in range(2,int(n**0.5)+1):
-        if n%i==0:
+        if (n%i==0):
             return 0
     return 1
-n=int(input())
-m=int(input())
+a=int(input())
+b=int(input())
 c=0
-for i in range(n,m+1):
-    if p(i):
+for i in range(a,b+1):
+    if prime(i):
         c+=1
 print(c)
