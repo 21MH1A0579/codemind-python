@@ -1,12 +1,12 @@
 n=int(input())
 a=list(map(int,input().split()))
-b=set(a)
-s=''
-for i in range(len(a)):
-    if a[i]==a.count(a[i]):
-        s+=str(a[i])
-k=set(s)
-if(k):
-    print(min(k),max(k))
-else:
+b=[]
+c=0
+for i in a:
+    if a.count(i)==i:
+        c+=1
+        b.append(i)
+if c==0:
     print("-1")
+else:
+    print(min(b),max(b))
