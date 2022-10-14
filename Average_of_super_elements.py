@@ -1,16 +1,12 @@
 n=int(input())
 a=list(map(int,input().split()))
-b=''
-sum=0
-c=0
-for i in range(len(a)):
-    if(a[i]==a.count(a[i])):
-        b+=str(a[i])
-c=set(b)
-t=(len(c))
-for j in c:
-    sum+=int(j)
-if (t>0):
-    print('%.2f'%(sum/t))
-else:
+s,c=0,0
+for i in set(a):
+    if a.count(i)==i:
+        s+=i
+        c+=1
+if c==0:
     print("-1")
+else:
+    k=s/c
+    print("%.2f"%k)
