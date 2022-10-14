@@ -1,19 +1,12 @@
-n=int(input())
-a=list(map(int,input().split()))
-l=len(a)-1
-k=l
-m=l
-if(l%2==0):
-    for i in range(0,len(a)):
-        if i!=(l//2) and i<l//2:
-            print(a[i],a[k],end=' ')
-            k=k-1
-    print(a[(l//2)],0)
+n = int(input())
+arr = list(map(int,input().split()))
+if n%2:
+    f = arr[0:(n//2)+1]
+    l = arr[n-1:n//2:-1]
 else:
-    for j in range(0,len(a)):
-        if j<(l//2)+1:
-            print(a[j],a[m],end=' ')
-            m=m-1
-        
-        
-    
+    f = arr[0:(n//2)]
+    l = arr[n-1:n//2-1:-1]
+if n%2:
+    l.append(0)
+for i in range(len(f)):
+    print(f[i],l[i],end=" ")
