@@ -1,14 +1,10 @@
 n=int(input())
-s=''
-c=0
 a=list(map(int,input().split()))
-k=int(input())
-for i in range(n):
-    if a.count(a[i])==k:
-        c=1
-        s+=str(a[i])
+m=int(input())
+c=0
+for i in set(a):
+    if a.count(i)==m:
+        c+=1
+        print(i,end=' ')
 if c==0:
     print("-1")
-else:
-    for j in sorted(set(s)):
-        print(j,end=' ')
