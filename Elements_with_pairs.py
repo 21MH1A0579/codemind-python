@@ -1,11 +1,7 @@
 n=int(input())
 a=list(map(int,input().split()))
-l=len(a)
-if(l%2==1):
-    for i in a:
-        print(i,end=' ')
-    print("0")
+if n%2==0:
+    print(*a)
 else:
-    for j in a:
-        print(j,end=' ')
-        
+    a.append(0)
+    print(*a)
